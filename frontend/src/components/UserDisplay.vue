@@ -2,7 +2,10 @@
 import { ref } from 'vue'
 
 defineProps({
-  user: Object,
+  user: {
+    type: Object,
+    default: () => ({ name: '', id: '', email: '' }),
+  },
 })
 
 const count = ref(0)
@@ -19,7 +22,6 @@ const count = ref(0)
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
   </div>
-
 </template>
 
 <style scoped>
