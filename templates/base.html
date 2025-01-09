@@ -1,4 +1,6 @@
 {% load django_vite %}<!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,10 +8,12 @@
     <title>{% block title %}My Django App{% endblock %}</title>
     {% vite_hmr_client %}
     {% vite_asset "src/main.js" %}
+    <link rel="stylesheet" href="{% static 'frontend/django-tailwind.css' %}">
+
     {% block head %}{% endblock %}
   </head>
   <body>
-    <h1 class="txt">Hello From Django</h1>
+    <h1 class="text-8xl text-amber-600 font-black py-8">Hello From Django</h1>
     {% block content %}{% endblock %}
   </body>
 </html>

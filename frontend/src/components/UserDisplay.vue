@@ -12,7 +12,7 @@ const count = ref(0)
 </script>
 
 <template>
-  <h3 class="title">Welcome {{ user.name }}</h3>
+  <h3 class="text-2xl font-bold text-blue-500">Welcome {{ user.name }}</h3>
 
   <div class="mt-2">
     <p>Id: {{ user.id }}</p>

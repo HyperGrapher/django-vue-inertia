@@ -9,7 +9,7 @@ const user = computed(() => page.props.user)
 </script>
 
 <template>
-  <h1>Vue Inertia App</h1>
+  <h1 class="text-4xl font-black mb-8">Vue Inertia App</h1>
 
   <UserDisplay :user="user" />
 
