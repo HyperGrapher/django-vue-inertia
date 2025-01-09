@@ -19,17 +19,3 @@ const user = computed(() => page.props.user)
     <a href="/about"> Django About Page </a>
   </div>
 </template>
-
-<style scoped>
-h1 {
-  color: tomato;
-  align-items: center;
-}
-
-.link-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  gap: 1rem;
-}
-</style>

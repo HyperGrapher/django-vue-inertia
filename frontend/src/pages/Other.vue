@@ -14,17 +14,3 @@ import { Link } from '@inertiajs/vue3'
   </div>
  
 </template>
-
-<style scoped>
-
-h1 {
-  color: tomato;
-}
-
-.link-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  gap: 1rem;
-}
-</style>

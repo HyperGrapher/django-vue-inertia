@@ -8,25 +8,13 @@
     <title>{% block title %}My Django App{% endblock %}</title>
     {% vite_hmr_client %}
     {% vite_asset "src/main.js" %}
-    <link rel="stylesheet" href="{% static 'frontend/django-tailwind.css' %}">
+    <link href="{% static 'css/tailwind.css' %}" rel="stylesheet">
 
     {% block head %}{% endblock %}
   </head>
   <body>
-    <h1 class="text-8xl text-amber-600 font-black py-8">Hello From Django</h1>
+    <h1 class="text-8xl text-red-600 font-black py-8">Hello From Django</h1>
     {% block content %}{% endblock %}
   </body>
 </html>
 
-
-{% comment %} 
-    {% if debug %}
-    <script>alert('hello debug')</script>
-    <script type="module" src="http://127.0.0.1:5173/@vite/client"></script>
-    <script type="module" src="http://127.0.0.1:5173/src/main.js"></script>
-    {% else %}
-    <script>alert('hello production')</script>
-    <link rel="stylesheet" href="{% static 'frontend/style.css' %}" />
-    <script type="module" src="{% static 'frontend/main.js' %}"></script>
-    {% endif %} 
-{% endcomment %}
