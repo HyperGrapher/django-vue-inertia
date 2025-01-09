@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "django_browser_reload",
+    'django_browser_reload',
     'django_vite',
+    'inertia',
+
 ]
 
 MIDDLEWARE = [
@@ -50,7 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
+    'inertia.middleware.InertiaMiddleware',
 
 ]
 
@@ -148,3 +151,4 @@ DJANGO_VITE_DEV_MODE = DEBUG  # Enables hot-reload during development
 DJANGO_VITE_DEV_SERVER_URL = "http://127.0.0.1:5173"
 
 
+INERTIA_LAYOUT = "vue_base.html"

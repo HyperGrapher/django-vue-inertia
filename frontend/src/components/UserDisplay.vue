@@ -2,14 +2,19 @@
 import { ref } from 'vue'
 
 defineProps({
-  msg: String,
+  user: Object,
 })
 
 const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h3 class="title">Welcome {{ user.name }}</h3>
+
+  <div class="mt-2">
+    <p>Id: {{ user.id }}</p>
+    <p>Email: {{ user.email }}</p>
+  </div>
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
@@ -18,7 +23,7 @@ const count = ref(0)
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+.title {
+  color: darkorange;
 }
 </style>

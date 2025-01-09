@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.shortcuts import render
 from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('app', views.app, name='app_page'),
+    path('other', views.other, name='other_page'),
+    path("about/", lambda request: render(request, "meta/about.html")),
+
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
-
 ]

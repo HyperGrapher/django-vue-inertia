@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+
+{% block title %} Django Vue App {% endblock %}
+
+
+{% block content %}
+
+    <p style="text-align: center;">
+        {{data}}
+    </p>
+
+    <div class="link-wrapper" style="display: flex; flex-direction:column; align-items: center; gap: 1rem;">
+        <a href="/app">Vue App Page </a>
+        <a href="/other">Vue Other Page </a>
+        <a href="/about">Django About Page </a>
+    </div>
+
+{% endblock %}
