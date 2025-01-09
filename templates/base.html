@@ -1,0 +1,29 @@
+{% load django_vite %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Django App{% endblock %}</title>
+{% comment %} 
+    {% if debug %}
+    <script>alert('hello debug')</script>
+    <script type="module" src="http://127.0.0.1:5173/@vite/client"></script>
+    <script type="module" src="http://127.0.0.1:5173/src/main.js"></script>
+    {% else %}
+    <script>alert('hello production')</script>
+    <link rel="stylesheet" href="{% static 'frontend/style.css' %}" />
+    <script type="module" src="{% static 'frontend/main.js' %}"></script>
+    {% endif %} 
+{% endcomment %}
+
+    {% vite_hmr_client %}
+    {% vite_asset "src/main.js" %}
+    
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <div id="app"></div>
+    <h1 class="txt">Hello From Django</h1>
+  </body>
+</html>

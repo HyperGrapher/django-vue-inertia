@@ -1,0 +1,17 @@
+{
+  "name": "django-vue",
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"python manage.py runserver\"",
+    "build": "npm run build --emptyOutDir --prefix frontend",
+    "frontend": "npm --prefix frontend",
+    "django": "python manage.py"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
