@@ -11,7 +11,12 @@ export default defineConfig({
     manifest: true,
     outDir: "../static/frontend",
     rollupOptions: {
-      input: "/src/main.js", // Your Vue entry point
+      // input: "/src/main.js", // Your Vue entry point
+      input: {
+        main: "/src/main.js",
+        django: "/src/django.css" // New entry point for Django styles
+      },
+
     },
   },
   resolve: {
@@ -22,4 +27,7 @@ export default defineConfig({
   server: {
     origin: "http://127.0.0.1:5173",
   },
+  css: {
+    postcss: '../postcss.config.js',
+  }
 });

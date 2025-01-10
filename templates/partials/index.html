@@ -6,14 +6,13 @@
 
 {% block content %}
 
-    <p style="text-align: center;" >
-        {{data}}
-    </p>
-
-    <div class="link-wrapper" style="display: flex; flex-direction:column; align-items: center; gap: 1rem;">
-        <a href="/app">Vue App Page </a>
-        <a href="/other">Vue Other Page </a>
-        <a href="/about">Django About Page </a>
+<div class="container mx-auto px-4">
+    <h4 class="text-2xl font-bold text-center my-8">{{ data }}</h4>
+    <div class="flex flex-col items-center space-y-4">
+      <a href="/app" class="text-blue-600 hover:text-blue-800">Vue App Page</a>
+      <a href="/other" class="text-blue-600 hover:text-blue-800">Vue Other Page</a>
+      <a href="/about" class="text-blue-600 hover:text-blue-800">Django About Page</a>
     </div>
+  </div>
 
 {% endblock %}

@@ -6,12 +6,15 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix frontend\" \"python manage.py runserver\"",
-    "build": "npm run build --emptyOutDir --prefix frontend",
-    "frontend": "npm --prefix frontend",
-    "django": "python manage.py"
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"python manage.py runserver\" \"npm run watch:css\"",
+    "build": "npm run build --emptyOutDir --prefix frontend && npm run build:css",
+    "watch:css": "npx @tailwindcss/cli -i frontend/src/django.css -o static/css/tailwind.css --watch",
+    "build:css": "npx @tailwindcss/cli -i frontend/src/django.css -o static/css/tailwind.css"
   },
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "@tailwindcss/cli": "^4.0.0-beta.9",
+    "@tailwindcss/postcss": "4.0.0-beta.9",
+    "concurrently": "^8.2.2",
+    "tailwindcss": "^4.0.0-beta.9"
   }
 }

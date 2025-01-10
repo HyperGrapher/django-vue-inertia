@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+
+h1 {
+    color: crimson;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    & h4 {
+        color: hotpink;
+        text-align: center;
+    }
+
+    & > div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        color: dodgerblue;
+    }
+}
